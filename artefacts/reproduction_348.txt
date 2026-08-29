@@ -1,0 +1,36 @@
+verify_reproduction_348.py -- H1 over every published cell
+==========================================================================
+search space   k = 1..400 spikes per recording, step 1
+NA convention  bare `NA` in the published nae table is read as 0
+               (established by scripts/verify_rat_na_cells.py)
+
+INPUTS
+  hPSC_MEA1   counts from data/derived/hPSC_MEA1_electrode_counts.csv
+  hPSC_MEA2   counts built from spike files -> data/derived/hPSC_MEA2_electrode_counts.csv
+  Rat_MEA1    counts from data/derived/Rat_MEA1_electrode_counts.csv
+
+PER PLATE, at the best threshold
+  plate         cells   NA    reproduced
+  hPSC_MEA1       114    0       114/114
+  hPSC_MEA2       114    0       114/114
+  Rat_MEA1        120   12       120/120
+  TOTAL           348   12       348/348
+
+BEST THRESHOLD  >= 100 spikes per recording
+  reproduced    348/348  (100.00%)
+  unique        YES  -- only k reaching 348/348 in 1..400
+
+ADJACENT THRESHOLDS
+      k    over 348    over 336 (frozen basis)
+     98         284                        273
+     99         314                        303
+    100         348                        336   <-- the rule
+    101         319                        307
+    102         289                        277
+
+WHAT REPLACES WHAT, if H1 is amended
+  frozen   336/336 exact; >=101 reproduces 307 of 336; >=99 reproduces 303
+  amended  348/348 exact; >=101 reproduces 319 of 348; >=99 reproduces 314
+
+  Every sentence in draft/ carrying 336, 307 or 303 is on the sweep,
+  as is the all-336 regex in scripts/verify_draft_claims.py [5b].

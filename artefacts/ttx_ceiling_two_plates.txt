@@ -1,0 +1,46 @@
+C6 — does the TTX noise ceiling reproduce on a second, independent plate?
+
+Pre-registered before running:
+   within +/-30% of 17.70  -> C6 PRIMARY
+   within +/-2x            -> C6 SUPPORTED, state the range
+   beyond 2x               -> C6 FAILS, rescale C7
+
+============================================================================
+  hPSC_MEA3TTX_DIV29  (human, DIV 29, 48-well)
+============================================================================
+  max spike time 599.9948 s   wells Control=2, ExcludedWell=24, NoTreatment=10, TTX=12
+
+  group          n_elec   median      p95      p99      max
+  Control            32   289.75   984.64  1165.49  1232.60
+  NoTreatment       160    70.55   632.96  1256.26  2094.40
+  TTX               192     3.30     5.14     9.43    17.70
+
+============================================================================
+  Rat_MEA2TTX_DIV22   (rat, DIV 22, 48-well)
+============================================================================
+  max spike time 599.9958 s   wells ExcludedWell=6, NoTreatment=28, TTX=14
+
+  group          n_elec   median      p95      p99      max
+  NoTreatment       448     5.90   244.12   497.53  1191.90
+  TTX               224     3.20     5.47    13.37   216.40
+
+============================================================================
+VERDICT
+============================================================================
+
+                      n    median     p95     p99      MAX (the ceiling)
+  human MEA3        192      3.30    5.14    9.43        17.70
+  rat   MEA2        224      3.20    5.47   13.37       216.40
+
+  ceiling ratio rat/human = 12.23x
+
+  ** C6 FAILS. ** The ceiling does not transfer. C7 must be rescaled
+  and the transfer stated as a limitation.
+
+  pooled silenced electrodes: n=416  median 3.30  p99 9.69  max 216.40 /min
+  active-electrode criterion = 10.00 /min
+  fraction of ALL silenced electrodes that the criterion would score ACTIVE: 4/416 (0.96%)
+
+  The criterion sits inside the distribution of rates produced by
+  electrodes whose sodium channels are pharmacologically blocked,
+  on two independent plates.

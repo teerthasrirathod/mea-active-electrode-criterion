@@ -1,0 +1,41 @@
+==========================================================================
+A1 — duration solved from published MFR   hPSC_MEA1 (human)
+==========================================================================
+
+  cells solved independently: 114
+  duration  min    = 599.730320000 s
+            median = 599.993200000 s
+            max    = 599.995920000 s
+            spread = 2.656e-01 s
+            sd     = 6.058e-02 s
+
+  distance from 600.000000: 6.800e-03 s
+==========================================================================
+A1 — duration solved from published MFR   Rat_MEA1 (rat)
+==========================================================================
+
+  cells solved independently: 108
+  duration  min    = 599.688800000 s
+            median = 599.995360000 s
+            max    = 599.996960000 s
+            spread = 3.082e-01 s
+            sd     = 7.585e-02 s
+
+  distance from 600.000000: 4.640e-03 s
+==========================================================================
+VERDICT — A1 and B3
+==========================================================================
+
+  222 independent solutions, pooled across both plates
+  derived duration = 599.994160000 s   (spread 3.08e-01 s)
+
+  -> NOT exactly 600 s. Deviation -0.005840 s.
+
+  Kapucu's stated rule '>10 spikes/min' means count > duration/6
+                                             = 99.999027
+  so the stated rule admits an electrode at count >= 100
+  the implemented rule, derived from 222/222 published values, is >= 100
+
+  ** B3 EVAPORATES. ** Stated and implemented rules agree at this
+  duration. The off-by-one was an artefact of assuming 600.000 s.
+  WITHDRAW B3.

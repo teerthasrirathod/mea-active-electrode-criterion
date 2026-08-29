@@ -1,0 +1,30 @@
+claim -> script -> number     (CLAIM-SET-FROZEN.md, all rows)
+==============================================================================
+claim status    artefact                          result
+------------------------------------------------------------------------------
+H1    TRACED    notes/reproduction_348.txt        ok
+H2    TRACED    notes/verify_all_results.txt      ok
+H3    TRACED    notes/replication_correlation.txt ok
+H4    TRACED    notes/verify_all_results.txt      ok
+S1    SURVEY    —                                 ok
+S2    SURVEY    —                                 ok
+S3    SURVEY    —                                 ok
+S4    SURVEY    —                                 ok
+S5    PRIMARY   —                                 ok
+S6    SURVEY    —                                 ok
+S7    SURVEY    —                                 ok
+S8    SURVEY    —                                 ok
+P1    SURVEY    —                                 ok
+M1    PRIMARY   —                                 ok
+M2    TRACED    notes/duration_derivation.txt     ok
+M3    TRACED    notes/ttx_ceiling_two_plates.txt  ok
+M4    TRACED    notes/threshold_suppression.txt   ok
+A1    TRACED    notes/inactive_bound.txt          ok
+A2    TRACED    notes/threshold_suppression.txt   ok
+A2b   TRACED    notes/threshold_suppression.txt   ok
+------------------------------------------------------------------------------
+  every one of the 20 rows in CLAIM-SET-FROZEN.md is mapped
+==============================================================================
+10 traced to a script and an artefact, 2 primary-source, 8 survey (Paper 2)
+0 failure(s), 0 warning(s)
+==============================================================================

@@ -1,0 +1,93 @@
+Every channel that emits a spike was recorded, so it cannot be on the
+InactiveChannels list. Counting channels seen therefore bounds the list
+from above, without reading a single byte of .h5.
+
+==============================================================================
+A7a / A7b — upper bound on InactiveChannels   hPSC_MEA1 (human)
+==============================================================================
+
+  wells recorded: 6   electrodes/well: 64   expected channels: 384
+
+   DIV   channels_seen   max_possible_inactive   % of array
+     3             384                       0        0.00%
+     7             384                       0        0.00%
+    10             384                       0        0.00%
+    14             384                       0        0.00%
+    17             384                       0        0.00%
+    21             384                       0        0.00%
+    24             384                       0        0.00%
+    28             384                       0        0.00%
+    31             384                       0        0.00%
+    35             384                       0        0.00%
+    38             384                       0        0.00%
+    42             384                       0        0.00%
+    45             384                       0        0.00%
+    48             384                       0        0.00%
+    51             384                       0        0.00%
+    56             384                       0        0.00%
+    59             384                       0        0.00%
+    63             383                       1        0.26%
+    66             384                       0        0.00%
+
+  total electrode-DIV observations: 7295 of 7296 possible
+  max possible inactive, worst recording: 1 (0.26% of the array)
+
+  correlation of the bound with DIV: r = +0.350
+  first recording bound = 0   last recording bound = 0
+
+  -> The bound never exceeds 2% of the array at ANY timepoint.
+     InactiveChannels is at most a couple of channels per
+     recording, and cannot be hiding accumulating hardware
+     failure. **A7a is effectively answered: the study's own
+     record of malfunctioning electrodes shows no attrition.**
+==============================================================================
+A7a / A7b — upper bound on InactiveChannels   Rat_MEA1 (rat)
+==============================================================================
+
+  wells recorded: 12   electrodes/well: 64   expected channels: 768
+
+   DIV   channels_seen   max_possible_inactive   % of array
+     2             767                       1        0.13%
+     7             768                       0        0.00%
+    10             767                       1        0.13%
+    14             766                       2        0.26%
+    17             767                       1        0.13%
+    21             767                       1        0.13%
+    24             767                       1        0.13%
+    28             767                       1        0.13%
+    31             765                       3        0.39%
+    35             766                       2        0.26%
+
+  total electrode-DIV observations: 7667 of 7680 possible
+  max possible inactive, worst recording: 3 (0.39% of the array)
+
+  correlation of the bound with DIV: r = +0.590
+  first recording bound = 1   last recording bound = 2
+
+  -> The bound never exceeds 2% of the array at ANY timepoint.
+     InactiveChannels is at most a couple of channels per
+     recording, and cannot be hiding accumulating hardware
+     failure. **A7a is effectively answered: the study's own
+     record of malfunctioning electrodes shows no attrition.**
+
+==============================================================================
+WHAT THIS SETTLES, AND WHAT IT DOES NOT
+==============================================================================
+
+  SETTLED (A7a, the substantive question):
+    The dataset's own record of electrodes 'not recorded due to
+    malfunctioning electrodes during acquisition' is bounded near zero
+    at every timepoint on both plates. Whatever else happens to these
+    cultures over 66 days, the experimenters did not record electrodes
+    dropping out of the hardware.
+
+  NOT SETTLED (A7b, the bookkeeping question):
+    Whether the list was regenerated per recording or carried forward.
+    A bound of ~0 makes the question nearly moot -- there is almost
+    nothing in the list to carry forward either way -- but it is not a
+    positive answer and should not be written as one.
+
+  The bound is an UPPER bound. A recorded electrode with zero detected
+  spikes is indistinguishable from an unrecorded one by this method.
+  Given A5b -- the detector always returns something -- zero-spike
+  electrodes are vanishingly rare, which is why the bound is tight.

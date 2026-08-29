@@ -1,0 +1,266 @@
+========================================================================
+PLATE hPSC_MEA1 (human, 12-well, 64 elec/well)
+========================================================================
+
+A1  max spike time across recordings: min=599.7377s  max=599.9980s  n=19
+    descriptor states 10 min recordings -> 600 s. Max spike time is a
+    LOWER bound only; it is consistent with 600 s, it does not prove it.
+
+A3  wells=6 ['A3', 'A4', 'B3', 'B4', 'C3', 'C4']
+    distinct electrode IDs=64  range 11-88
+    channels violating <well>_[1-8][1-8]: 0  []
+    total distinct channels = 384
+
+A6  noisy-electrode list: 19 DIV columns, 16 distinct sets, union=24 electrodes
+    varies by DIV -> at least partly per-recording.
+      DIV   3: ['A4_75', 'B2_32', 'C3_77']
+      DIV   7: ['B2_32', 'C4_86']
+      DIV  10: ['B2_32', 'B4_15', 'B4_53', 'B4_74', 'C4_77', 'C4_87']
+      DIV  14: ['B2_32', 'C4_87']
+      DIV  17: ['B2_32', 'B3_43', 'B3_67']
+      DIV  21: ['B2_32', 'C4_77']
+      DIV  24: ['B2_32', 'B3_61', 'C4_87']
+      DIV  28: ['B2_32', 'B4_53', 'C4_87']
+      DIV  31: ['B2_32', 'C4_77']
+      DIV  35: ['B2_32', 'B3_61', 'B4_42', 'C4_76', 'C4_87']
+      DIV  38: ['A3_53', 'A4_43', 'B2_32', 'B3_81', 'B4_43', 'C4_77']
+      DIV  42: ['B2_32', 'C4_77', 'C4_87']
+      DIV  45: ['B2_32', 'C4_66', 'C4_77', 'C4_87']
+      DIV  48: ['B2_32', 'C4_77']
+      DIV  51: ['B2_32', 'B3_82', 'C4_77', 'C4_87']
+      DIV  56: ['A4_43', 'B2_32', 'B4_13', 'B4_52', 'C4_77']
+      DIV  59: ['B2_32', 'B4_43', 'C4_11', 'C4_77']
+      DIV  63: ['B2_32', 'C4_77']
+      DIV  66: ['A4_12', 'A4_43', 'B2_32', 'B4_13', 'C4_77']
+
+B2/B3  noisy electrodes excluded = False
+       criterion >= 100 spikes : 109/114 reproduced exactly
+       criterion >= 101 spikes : 95/114 reproduced exactly
+       criterion >=  99 spikes : 94/114 reproduced exactly
+       >=100 mismatches (well,div,published,mine): [('B3', 17, 43, 44), ('B4', 10, 32, 34), ('B4', 66, 13, 14), ('C3', 3, 54, 55), ('C4', 59, 32, 33)]
+
+B2/B3  noisy electrodes excluded = True
+       criterion >= 100 spikes : 114/114 reproduced exactly
+       criterion >= 101 spikes : 100/114 reproduced exactly
+       criterion >=  99 spikes : 99/114 reproduced exactly
+
+B5  active-electrode count under three published criteria
+    meaRtools default 1/min (>=11) | Axion-era 5/min (>=50) | Kapucu 10/min (>=100)
+      DIV    n@1/min   n@5/min  n@10/min   1/min:10/min
+        3        384       355       321         1.20x
+        7        384       338       283         1.36x
+       10        383       312       225         1.70x
+       14        384       291       210         1.83x
+       17        383       299       225         1.70x
+       21        384       310       241         1.59x
+       24        384       336       275         1.40x
+       28        381       305       251         1.52x
+       31        382       285       226         1.69x
+       35        382       274       213         1.79x
+       38        384       279       210         1.83x
+       42        383       241       154         2.49x
+       45        383       262       186         2.06x
+       48        381       229       143         2.66x
+       51        384       154        69         5.57x
+       56        384       109        45         8.53x
+       59        382       228       133         2.87x
+       63        382       219       120         3.18x
+       66        382       201       103         3.71x
+
+C1/C2  DIV 66: electrodes with >=1 detected spike = 384
+       expected total electrodes = 6 wells x 64 = 384
+========================================================================
+PLATE hPSC_MEA2 (human, 12-well, 64 elec/well, parallel replicate)
+========================================================================
+
+A1  max spike time across recordings: min=599.9542s  max=599.9979s  n=19
+    descriptor states 10 min recordings -> 600 s. Max spike time is a
+    LOWER bound only; it is consistent with 600 s, it does not prove it.
+
+A3  wells=6 ['A3', 'A4', 'B3', 'B4', 'C3', 'C4']
+    distinct electrode IDs=64  range 11-88
+    channels violating <well>_[1-8][1-8]: 0  []
+    total distinct channels = 384
+
+A6  noisy-electrode list: 19 DIV columns, 18 distinct sets, union=54 electrodes
+    varies by DIV -> at least partly per-recording.
+      DIV   3: ['A3_13', 'B2_32', 'B4_31', 'B4_75']
+      DIV   7: ['B2_32']
+      DIV  10: ['B2_32', 'C3_86', 'C3_87', 'C4_33', 'C4_85']
+      DIV  14: ['B2_32', 'C4_85', 'C4_88']
+      DIV  17: ['A4_15', 'B2_32']
+      DIV  21: ['A4_13', 'B2_32']
+      DIV  24: ['A4_13', 'B2_32']
+      DIV  28: ['A4_13', 'B2_32', 'B3_63', 'C3_55']
+      DIV  31: ['A4_13', 'B2_32', 'B3_82', 'B4_46', 'B4_82', 'C3_55', 'C4_73', 'C4_85']
+      DIV  35: ['B2_32', 'B3_37', 'B3_65', 'B4_27', 'B4_68', 'B4_82', 'C3_66']
+      DIV  38: ['A3_62', 'A4_15', 'B2_32', 'B3_37', 'B3_57', 'B4_13', 'B4_27', 'C3_33', 'C3_55', 'C4_66']
+      DIV  42: ['A3_76', 'A4_13', 'B2_32', 'B3_37', 'B3_63', 'B4_38', 'B4_43', 'B4_87', 'C3_14', 'C3_33', 'C4_75', 'C4_76']
+      DIV  45: ['A4_13', 'B2_32', 'B3_42', 'B3_54', 'B3_63', 'B3_71', 'B3_85', 'B4_13', 'B4_14', 'B4_68', 'B4_82', 'B4_83', 'C3_55']
+      DIV  48: ['A4_13', 'A4_15', 'B2_32', 'B3_42', 'B3_54', 'B3_63', 'B3_71', 'B3_85', 'B4_14', 'B4_41', 'B4_44', 'B4_68', 'C3_55', 'C4_36']
+      DIV  51: ['B2_32', 'B3_71', 'B4_41', 'B4_44', 'B4_66', 'B4_83', 'B4_86', 'C3_55', 'C4_36']
+      DIV  56: ['A4_15', 'A4_32', 'A4_66', 'B2_32', 'B3_42', 'B3_57', 'B3_63', 'B3_71', 'B3_85', 'B4_13', 'B4_27', 'B4_44', 'B4_68', 'C3_55', 'C4_11', 'C4_36']
+      DIV  59: ['A3_68', 'B2_32', 'B3_42', 'B3_64', 'B3_71', 'B3_86', 'B4_38', 'B4_44', 'B4_67', 'B4_82', 'C3_38']
+      DIV  63: ['A4_15', 'A4_32', 'A4_66', 'B2_32', 'B3_31', 'B3_63', 'B3_71', 'B3_85', 'B4_27', 'B4_44', 'B4_68', 'C3_55', 'C4_11', 'C4_36']
+      DIV  66: ['A4_15', 'A4_32', 'B2_32', 'B3_42', 'B3_71', 'B3_85', 'B4_27', 'B4_44', 'B4_68', 'C3_55', 'C4_11']
+
+B2/B3  noisy electrodes excluded = False
+       criterion >= 100 spikes : 102/114 reproduced exactly
+       criterion >= 101 spikes : 91/114 reproduced exactly
+       criterion >=  99 spikes : 91/114 reproduced exactly
+       >=100 mismatches (well,div,published,mine): [('A3', 3, 53, 54), ('A4', 17, 37, 38), ('A4', 56, 6, 7), ('A4', 63, 19, 20), ('B3', 35, 27, 29), ('B3', 45, 22, 23), ('B3', 48, 14, 15), ('B3', 63, 10, 11)]
+
+B2/B3  noisy electrodes excluded = True
+       criterion >= 100 spikes : 114/114 reproduced exactly
+       criterion >= 101 spikes : 102/114 reproduced exactly
+       criterion >=  99 spikes : 103/114 reproduced exactly
+
+B5  active-electrode count under three published criteria
+    meaRtools default 1/min (>=11) | Axion-era 5/min (>=50) | Kapucu 10/min (>=100)
+      DIV    n@1/min   n@5/min  n@10/min   1/min:10/min
+        3        384       360       315         1.22x
+        7        384       338       288         1.33x
+       10        381       304       218         1.75x
+       14        382       291       207         1.85x
+       17        383       303       211         1.82x
+       21        384       332       255         1.51x
+       24        384       325       259         1.48x
+       28        384       289       228         1.68x
+       31        382       279       217         1.76x
+       35        383       280       199         1.92x
+       38        384       283       218         1.76x
+       42        383       252       178         2.15x
+       45        384       268       189         2.03x
+       48        382       216       124         3.08x
+       51        384       134        60         6.40x
+       56        384       122        55         6.98x
+       59        383       219       132         2.90x
+       63        384       191       108         3.56x
+       66        384       190       108         3.56x
+
+C1/C2  DIV 66: electrodes with >=1 detected spike = 384
+       expected total electrodes = 6 wells x 64 = 384
+========================================================================
+PLATE Rat_MEA1 (rat, 12-well, 64 elec/well)
+========================================================================
+
+A1  max spike time across recordings: min=599.7332s  max=599.9982s  n=10
+    descriptor states 10 min recordings -> 600 s. Max spike time is a
+    LOWER bound only; it is consistent with 600 s, it does not prove it.
+
+A3  wells=12 ['A1', 'A2', 'A3', 'A4', 'B1', 'B2', 'B3', 'B4', 'C1', 'C2', 'C3', 'C4']
+    distinct electrode IDs=64  range 11-88
+    channels violating <well>_[1-8][1-8]: 0  []
+    total distinct channels = 768
+
+A6  noisy-electrode list: 10 DIV columns, 10 distinct sets, union=27 electrodes
+    varies by DIV -> at least partly per-recording.
+      DIV   2: ['A2_21', 'A3_24', 'B2_32', 'B3_17', 'B4_51']
+      DIV   7: ['A1_16', 'B2_32', 'B3_17', 'B4_67', 'B4_81', 'C4_44', 'C4_53']
+      DIV  10: ['A2_21', 'A3_65', 'B2_32', 'B2_83', 'B3_17', 'B4_42', 'B4_51', 'C2_88']
+      DIV  14: ['A2_21', 'A3_65', 'B2_32', 'B2_83', 'B3_17', 'B4_41', 'B4_42']
+      DIV  17: ['A1_75', 'A2_21', 'A4_41', 'B2_32', 'B4_15', 'B4_42', 'B4_81']
+      DIV  21: ['B2_32', 'C2_88']
+      DIV  24: ['A2_12', 'A4_41', 'B2_32', 'B3_17', 'B4_42']
+      DIV  28: ['A2_15', 'A3_74', 'B2_32', 'B3_44', 'C4_81']
+      DIV  31: ['B2_32', 'B3_66']
+      DIV  35: ['A1_23', 'A2_12', 'A4_31', 'B2_32', 'B4_62']
+
+B2/B3  noisy electrodes excluded = False
+       criterion >= 100 spikes : 107/108 reproduced exactly
+       criterion >= 101 spikes : 104/108 reproduced exactly
+       criterion >=  99 spikes : 100/108 reproduced exactly
+       >=100 mismatches (well,div,published,mine): [('B4', 10, 9, 10)]
+
+B2/B3  noisy electrodes excluded = True
+       criterion >= 100 spikes : 108/108 reproduced exactly
+       criterion >= 101 spikes : 105/108 reproduced exactly
+       criterion >=  99 spikes : 101/108 reproduced exactly
+
+B5  active-electrode count under three published criteria
+    meaRtools default 1/min (>=11) | Axion-era 5/min (>=50) | Kapucu 10/min (>=100)
+      DIV    n@1/min   n@5/min  n@10/min   1/min:10/min
+        2        767        63         7       109.57x
+        7        768        95        16        48.00x
+       10        767       315       145         5.29x
+       14        766       694       617         1.24x
+       17        766       733       710         1.08x
+       21        766       741       719         1.07x
+       24        766       732       711         1.08x
+       28        766       721       687         1.11x
+       31        764       636       570         1.34x
+       35        763       441       346         2.21x
+
+C1/C2  DIV 35: electrodes with >=1 detected spike = 766
+       expected total electrodes = 12 wells x 64 = 768
+
+========================================================================
+C6  TTX NOISE CEILING — recomputed from raw spike times
+========================================================================
+
+expLog treatment groups: Control=2, ExcludedWell=24, NoTreatment=10, TTX=12
+max spike time in TTX file = 599.9948 s (descriptor: TTX response recorded for 10 minutes = 600 s)
+
+  group          n_elec   median      p95      p99      max
+  Control           32   289.75   984.64  1165.49  1232.60
+  NoTreatment      160    70.55   632.96  1256.26  2094.40
+  TTX              192     3.30     5.14     9.43    17.70
+
+  -> noise ceiling (max rate on a silenced electrode) = 17.70 spikes/min
+  -> active criterion is 10 spikes/min; ceiling/criterion = 1.77x
+  -> silenced electrodes scored ACTIVE by the criterion: 1/192
+
+========================================================================
+C7  CONTAMINATION of published nae — hPSC_MEA1
+========================================================================
+  ceiling transferred from MEA3 = 17.70 spikes/min = 177.0 spikes / 600 s
+
+   DIV   scored_active   above_ceiling   within_noise   %within
+     3             321             280             41     12.8%
+     7             283             232             51     18.0%
+    10             225             187             38     16.9%
+    14             210             162             48     22.9%
+    17             225             178             47     20.9%
+    21             241             194             47     19.5%
+    24             275             231             44     16.0%
+    28             251             214             37     14.7%
+    31             226             185             41     18.1%
+    35             213             179             34     16.0%
+    38             210             166             44     21.0%
+    42             154             102             52     33.8%
+    45             186             134             52     28.0%
+    48             143             101             42     29.4%
+    51              69              41             28     40.6%
+    56              45              21             24     53.3%
+    59             133              87             46     34.6%
+    63             120              78             42     35.0%
+    66             103              68             35     34.0%
+
+========================================================================
+C7  CONTAMINATION of published nae — Rat_MEA1
+========================================================================
+  ceiling transferred from MEA3 = 17.70 spikes/min = 177.0 spikes / 600 s
+
+   DIV   scored_active   above_ceiling   within_noise   %within
+     2               7               3              4     57.1%
+     7              16               8              8     50.0%
+    10             145              94             51     35.2%
+    14             617             554             63     10.2%
+    17             710             679             31      4.4%
+    21             719             708             11      1.5%
+    24             711             691             20      2.8%
+    28             687             658             29      4.2%
+    31             570             530             40      7.0%
+    35             346             296             50     14.5%
+
+========================================================================
+H1 TOTAL across all three plates
+========================================================================
+
+  Reproduction of the published nae tables is claimed at 336/336.
+  Per-plate totals at each candidate criterion, summed here so the
+  headline number is regenerated rather than assembled by hand:
+
+    >=  99 spikes : 303/336 reproduced exactly
+    >= 100 spikes : 336/336 reproduced exactly   <-- H1
+    >= 101 spikes : 307/336 reproduced exactly

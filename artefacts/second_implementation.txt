@@ -1,0 +1,58 @@
+verify_second_implementation.py
+==============================================================================
+Independent recomputation of the six single-implementation claims.
+Spike counts parsed from the published *_spikes.csv, not from
+data/derived/ — that intermediate belongs to the first pipeline.
+
+PARSING (cached under notes/verify2_cache/)
+  hPSC_MEA1
+  hPSC_MEA2
+  Rat_MEA1
+  hPSC_MEA3TTX
+  Rat_MEA2TTX
+
+H2  under the package default the developmental decline does not exist
+  DIFFER  1/min, minimum across timepoints             recomputed 381   frozen 382
+  MATCH   1/min, maximum across timepoints             recomputed 384   frozen 384
+  MATCH   timepoints                                   recomputed 19   frozen 19
+  MATCH   10/min at DIV 3                              recomputed 321   frozen 321
+  MATCH   10/min at DIV 66                             recomputed 103   frozen 103
+  MATCH   10/min, DIV 3 -> 66                          recomputed -68%   frozen -68%
+          1/min per DIV: [384, 384, 383, 384, 384, 384, 384, 381, 383, 383, 384, 383, 383, 381, 384, 384, 382, 382, 382]
+
+H3  the result replicates on the parallel plate
+  MATCH   Pearson r at 10/min                          recomputed 0.986   frozen 0.986
+  DIFFER  Pearson r at 1/min                           recomputed 0.13   frozen 0.29
+  MATCH   MEA2 10/min, DIV 3 -> 66                     recomputed -66%   frozen -66%
+  MATCH   MEA1 1/min, DIV 3 -> 66                      recomputed -0.5%   frozen -0.5%
+  MATCH   MEA2 1/min, DIV 3 -> 66                      recomputed 0.0%   frozen 0.0%
+
+H4  on the rat plate the two criteria differ by up to 109x
+  MATCH   DIV 2 at 1/min                               recomputed 767   frozen 767
+  MATCH   DIV 2 at 10/min                              recomputed 7   frozen 7
+  MATCH   ratio at DIV 2                               recomputed 109.6x   frozen 109.6x
+
+M2  the rate denominator is the plate-wide first-to-last spike span
+  MATCH   recordings where the span matches exactly    recomputed 29   frozen 29
+  MATCH   shortest span                                recomputed 599.689 s   frozen 599.689 s
+  MATCH   longest span                                 recomputed 599.997 s   frozen 599.997 s
+
+M3  the criterion sits at the 99th percentile of silenced electrodes
+  MATCH   silenced electrodes pooled                   recomputed 416   frozen 416
+  MATCH   99th percentile                              recomputed 9.7 /min   frozen 9.69 /min
+  MATCH   electrodes above 10/min                      recomputed 4   frozen 4
+
+A1  the study's own hardware-failure record shows no attrition
+  MATCH   hPSC_MEA1 recordings bounding at 0           recomputed 18   frozen 18
+  MATCH   hPSC_MEA1 recordings                         recomputed 19   frozen 19
+  MATCH   hPSC_MEA2 recordings bounding at 0           recomputed 19   frozen 19
+  MATCH   Rat_MEA1 largest bound                       recomputed 3   frozen 3
+  MATCH   Rat_MEA1 largest bound as % of array         recomputed 0.39%   frozen 0.39%
+          hPSC_MEA1 non-zero bounds: {'63': 1}
+
+==============================================================================
+25 comparisons, 23 match, 2 differ
+
+A DIFFERENCE IS NOT AUTOMATICALLY AN ERROR IN THE PAPER. It means the
+two implementations disagree, and the disagreement has to be resolved
+before either number is trusted. Read the line, then read both scripts.

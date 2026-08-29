@@ -1,0 +1,41 @@
+verify_rat_na_cells.py -- are the `NA` cells missing recordings, or zeros?
+==============================================================================
+
+plate      : Rat_MEA1
+nae table  : 12 wells x 10 timepoints = 120 cells
+`NA` cells : 12  -> 108 cells carry a value
+
+DIV 2 -- 7 `NA` cells
+  well      spikes electrodes      >=100    flagged     rule
+  A1          2433         64          0          0        0
+  A3          2455         64          0          0        0
+  B2          2455         63          0          0        0
+  B3          2353         64          0          0        0
+  B4          2358         64          0          0        0
+  C2          2320         64          0          0        0
+  C4          2507         64          0          0        0
+
+DIV 7 -- 5 `NA` cells
+  well      spikes electrodes      >=100    flagged     rule
+  A3          2448         64          0          0        0
+  B2          2929         64          1          1        0
+  B4          2254         64          0          0        0
+  C2          2377         64          0          0        0
+  C4          2364         64          0          0        0
+
+------------------------------------------------------------------------------
+wells that WERE recorded (>=1 electrode producing spikes) : 12 of 12
+cells the rule returns 0 for                              : 12 of 12
+
+RESULT: every `NA` cell is a recorded well in which zero electrodes
+        meet the criterion. Bare `NA` in this table means ZERO ACTIVE
+        ELECTRODES, not a missing recording.
+
+        Consequences:
+        - notes/logbook.md Day 1 anomaly 4 records bare `NA` as `well
+          not recorded that day`. For this table that reading is wrong.
+        - Rat_MEA1 is reproduced at 120/120, not 108/120, and the
+          three-plate total is 348/348 rather than 336/336.
+        - The 12 cells are the most extreme cases of the paper's own
+          claim: wells with thousands of detected spikes across 63-64
+          electrodes, scored as no active electrodes.
