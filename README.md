@@ -1,8 +1,8 @@
 # An undeclared free parameter underneath *in vitro* microelectrode array metrics
 
 Analysis code and recorded outputs for the paper of that title
-(Teertha Sri Rathod Banoth, G. B. Pant University of Agriculture and Technology,
-Pantnagar). Archived at <https://doi.org/10.5281/zenodo.22099882>.
+(Teertha Sri Rathod Banoth, Independent Researcher, Khammam, Telangana, India).
+Archived at <https://doi.org/10.5281/zenodo.22099882>.
 
 Every quantity reported in the paper is regenerated from published files by one
 of the scripts here. Nothing in this repository is a redistribution: all inputs
