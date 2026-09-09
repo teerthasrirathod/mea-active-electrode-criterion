@@ -54,10 +54,16 @@ paper. `claim_map_output.txt` is the map from each claim to the script and the
 artefact that produce it.
 
 `claim_map.py` validates that map against the manuscript source and against the
-frozen claim set. Neither is redistributed here, so the script cannot be re-run
-against a fresh clone; the committed output is the run of record. The claim set
-itself, the map, and the record of claims withdrawn under it are deposited with
-the paper.
+frozen claim set. The claim set is in `claim-set/`; the manuscript source is not
+redistributed, so the script cannot be re-run against a fresh clone and the
+committed output is the run of record.
+
+## claim-set/
+
+The frozen claim set, the record of the five claims withdrawn under it, and the
+audit decisions log from the line-by-line pass. Deposited on posting day, with
+`claim-set/README.md` describing what each file is. They are the working files
+as written, not a version prepared for a reader.
 
 ## figures/
 
