@@ -71,8 +71,14 @@ The three figures carried by the paper, as produced by the scripts above.
 
 ## Licence
 
-The code in this repository is MIT-licensed (see `LICENSE`). The inputs it reads
-are CC BY 4.0, © Kapucu et al. (2022), and are not redistributed here.
+The code in this repository is MIT-licensed (see `LICENSE`). The documents in
+`claim-set/` are prose rather than code and are CC BY 4.0. The inputs the scripts
+read are CC BY 4.0, © Kapucu et al. (2022), and are not redistributed here.
+
+The Zenodo archive of this repository is deposited under **CC BY 4.0** as a
+single licence across the whole bundle, because the deposit contains both the
+code and those documents. That is a broader permission than MIT on the code
+alone, not a narrower one, so nothing here is restricted by it.
 
 ## Citation
 
